@@ -17,14 +17,51 @@
 
 <body>
   <nav class="navigation">
-    <a href="/" class="navigation__link" title="Tela inicial">
+    <a href="/" class="navigation__link" title="Início" aria-label="Início">
       <img class="navigation__icon" src="./assets/icons/logo.svg" alt="Logo da Snitap">
     </a>
-    <a href="/" class="navigation__link bag" title="Suas compras">
+    <a href="/" class="navigation__link bag" title="Suas compras" aria-label="Suas compras">
       <img class="navigation__icon" src="./assets/icons/shopping-bag.svg" alt="Carrinho de compras">
-      <span>99</span>
+      <span aria-label="Itens no carrinho">99</span>
     </a>
   </nav>
+
+  <section class="hero">
+    <div class="hero__container-left">
+      <h1 class="hero__title">
+        Snitap, sua vida mais 
+        <div class="hero__words">
+          <span>radical</span>
+          <span>divertida</span>
+          <span>saudável</span>
+          <span>radical</span>
+        </div>
+      </h1>
+
+      <div class="hero__buttons">
+        <a href="/" class="hero__button buy shadow">
+          <img class="hero__icon" src="./assets/icons/shopping-bag.svg" alt="" aria-hidden="true">
+          <span>COMPRAR AGORA</span>
+        </a>
+
+        <a href="/" class="hero__button">
+          <div class="play shadow">
+            <img class="hero__icon" src="./assets/icons/play.svg" alt="" aria-hidden="true">
+          </div>
+          <span>VEJA EM AÇÃO</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__container-right">
+      <div class="hero__image">
+        <img src="./assets/hero/ellipse.svg" alt="">
+        <img src="./assets/hero/patins.png" alt="">
+        <img src="./assets/hero/stars-1.svg" alt="">
+        <img src="./assets/hero/stars-2.svg" alt="">
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>
