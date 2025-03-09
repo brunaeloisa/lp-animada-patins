@@ -15,6 +15,7 @@
   --highlight-color: #000000;
   --background-color: #fafafa;
 
+  --text-sm: .875rem;
   --text-base: 1rem;
   --text-lg: 2.5rem;
   --text-xl: 4rem;
@@ -28,19 +29,11 @@ html, button {
   line-height: 1.5;
 }
 
-h1, h2 {
+h1 {
   font-family: 'Syne', sans-serif;
   font-weight: 700;
-}
-
-h1 {
   font-size: var(--text-xl);
   line-height: 1.25;
-}
-
-h2 {
-  font-size: var(--text-lg);
-  line-height: 1.2;
 }
 
 a {
