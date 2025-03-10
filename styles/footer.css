@@ -1,0 +1,90 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 4rem 2rem 2rem;
+}
+
+footer .logo {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+footer .logo span {
+  font: 700 1.25rem/1.3 'Syne', sans-serif;
+}
+
+footer .logo img {
+  width: 2rem;
+  transition: transform .35s;
+}
+
+footer .logo img:hover {
+  transform: rotate(90deg);
+}
+
+footer nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.bottom-link {
+  width: fit-content;
+  position: relative;
+}
+
+.bottom-link::after {
+  content: "";
+  width: 94%;
+  height: 2px;
+  background-color: var(--snitap-sky-mid);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  transform: scaleX(0);
+  opacity: 0;
+  transition: transform .2s, opacity .2s;
+}
+
+.bottom-link:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 5rem;
+  position: relative;
+}
+
+.social-links a::before {
+  content: "";
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--snitap-sun);
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+  transition: transform .25s;
+}
+
+.social-links a:hover::before {
+  cursor: pointer;
+  transform: scale(1);
+}
