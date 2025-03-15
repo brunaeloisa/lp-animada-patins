@@ -1,10 +1,8 @@
 .hero {
   display: flex;
   justify-content: space-between;
-  
+  overflow: hidden;
   padding: 2.5rem 2rem;
-  max-width: 1280px;
-  margin-inline: auto;
 }
 
 /* LEFT */
@@ -12,6 +10,7 @@
 .hero__container-left {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 3rem;
   padding-right: 2rem;
 }
@@ -47,7 +46,7 @@
 .hero__words span {
   display: block;
   will-change: transform;
-  animation: slideUp 6s .5s infinite ease-in-out;
+  animation: slide-up 6s .5s infinite ease-in-out;
 }
 
 .hero__buttons {
@@ -111,19 +110,19 @@
 .hero__image img {
   position: absolute;
   max-width: 100%;
-  transition: slideIn .5s;
+  transition: slide-in .5s;
 }
 
 img[src*="ellipse"] {
   width: 95%;
   transform: translateX(200%);
-  animation: slideIn 1.5s .2s ease forwards;
+  animation: slide-in 1.5s .2s ease forwards;
 }
 
 img[src*="patins"] {
   z-index: 1;
   transform: translateX(200%);
-  animation: slideIn 1.6s ease forwards;
+  animation: slide-in 1.6s ease forwards;
 }
 
 img[src*="stars-1"] {
@@ -133,7 +132,7 @@ img[src*="stars-1"] {
   z-index: 2;
   opacity: 0;
   transform: translateX(400%);
-  animation: slideIn 1.1s .35s ease forwards, appear .2s .35s forwards;
+  animation: slide-in 1.1s .35s ease forwards, appear .2s .35s forwards;
 }
 
 img[src*="stars-2"] {
@@ -143,7 +142,7 @@ img[src*="stars-2"] {
   z-index: 2;
   opacity: 0;
   transform: translateX(700%);
-  animation: slideIn 1.2s .45s ease forwards, appear .1s .45s forwards;
+  animation: slide-in 1.2s .45s ease forwards, appear .1s .45s forwards;
 }
 
 /* ANIMATIONS */
@@ -154,7 +153,7 @@ img[src*="stars-2"] {
   }
 }
 
-@keyframes slideIn {
+@keyframes slide-in {
   50% {
     transform: translateX(-20px);
   }
@@ -164,12 +163,11 @@ img[src*="stars-2"] {
   }
 }
 
-@keyframes slideUp {
+@keyframes slide-up {
   0%, 22% {
     transform: translateY(0);
   }
 
-  /* bounce effect */
   23% {
     transform: translateY(calc(-5rem - 15px));
   }

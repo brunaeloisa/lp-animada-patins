@@ -21,10 +21,6 @@ footer .logo img {
   transition: transform .35s;
 }
 
-footer .logo img:hover {
-  transform: rotate(90deg);
-}
-
 footer nav {
   display: flex;
   gap: 2rem;

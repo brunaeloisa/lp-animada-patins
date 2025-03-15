@@ -4,3 +4,12 @@
 @import url('./banner.css');
 @import url('./gallery.css');
 @import url('./footer.css');
+
+.max-w {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+img[src*="logo"]:hover {
+  transform: rotate(90deg);
+}

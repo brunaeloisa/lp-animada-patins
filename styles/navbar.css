@@ -42,7 +42,3 @@
   width: 100%;
   transition: transform .5s ease;
 }
-
-img[src*="logo"]:hover {
-  transform: rotate(90deg);
-}

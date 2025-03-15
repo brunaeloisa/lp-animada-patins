@@ -1,8 +1,6 @@
 .gallery {
   width: 100%;
-  max-width: 80rem;
   padding: 2.5rem 2rem;
-  margin: 0 auto;
 }
 
 .gallery__header {
@@ -81,6 +79,7 @@
   transform: translateY(100%);
   transition: transform .5s;
   font-size: var(--text-sm);
+  color: #ffffff;
   width: 100%;
   padding: 1rem 2rem;
   background: linear-gradient(to top, rgba(0,0,0,.64), transparent);
