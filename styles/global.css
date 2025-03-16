@@ -19,6 +19,9 @@
   --text-base: 1rem;
   --text-lg: 2.5rem;
   --text-xl: 4rem;
+
+  --default-spacing: 2rem;
+  --mobile-spacing: 1.5rem;
 }
 
 body {

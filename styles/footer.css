@@ -1,39 +1,39 @@
-footer {
+.footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 4rem 2rem 2rem;
+  padding: 4rem var(--default-spacing) var(--default-spacing);
 }
 
-footer .logo {
+.footer__logo {
   display: flex;
   align-items: center;
   gap: .75rem;
 }
 
-footer .logo span {
+.footer__logo span {
   font: 700 1.25rem/1.3 'Syne', sans-serif;
 }
 
-footer .logo img {
+.footer__logo img {
   width: 2rem;
   transition: transform .35s;
 }
 
-footer nav {
+.footer__general {
   display: flex;
   gap: 2rem;
 }
 
-.bottom-link {
+.footer__bottom-link {
   width: fit-content;
   position: relative;
 }
 
-.bottom-link::after {
+.footer__bottom-link::after {
   content: "";
-  width: 94%;
+  width: calc(100% - 6px);
   height: 2px;
   background-color: var(--snitap-sky-mid);
   position: absolute;
@@ -46,17 +46,17 @@ footer nav {
   transition: transform .2s, opacity .2s;
 }
 
-.bottom-link:hover::after {
+.footer__bottom-link:hover::after {
   transform: scaleX(1);
   opacity: 1;
 }
 
-.social-links {
+.footer__social {
   display: flex;
   align-items: center;
 }
 
-.social-links a {
+.footer__social-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,7 +66,7 @@ footer nav {
   position: relative;
 }
 
-.social-links a::before {
+.footer__social-link::before {
   content: "";
   width: inherit;
   height: inherit;
@@ -80,7 +80,48 @@ footer nav {
   transition: transform .25s;
 }
 
-.social-links a:hover::before {
+.footer__social-link:hover::before {
   cursor: pointer;
   transform: scale(1);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 850px) {
+  .footer {
+    display: grid;
+    grid-template-areas: 
+      "E G"
+      "F F";
+    gap: 2rem;
+    padding-top: 3rem;
+  }
+  
+  .footer__logo {
+    grid-area: E;
+  }
+
+  .footer__general {
+    grid-area: F;
+    flex-direction: column;
+    gap: var(--mobile-spacing);
+  }
+
+  .footer__social {
+    grid-area: G;
+  }
+}
+
+@media (max-width: 512px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 3rem var(--mobile-spacing) var(--mobile-spacing);
+  }
+
+  .footer__social {
+    margin: -0.25rem 0 0 -0.5rem;
+  }
 }

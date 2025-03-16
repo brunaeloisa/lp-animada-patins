@@ -36,3 +36,11 @@
     transform: translateX(-132px);
   }
 }
+
+/* MOBILE */
+
+@media (max-width: 512px) {
+  .banner {
+    padding: var(--mobile-spacing) 0;
+  }
+}

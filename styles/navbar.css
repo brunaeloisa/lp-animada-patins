@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 2rem;
+  padding: 1.25rem var(--default-spacing);
   width: 100%;
 }
 
@@ -41,4 +41,12 @@
 .navigation__icon {
   width: 100%;
   transition: transform .5s ease;
+}
+
+/* MOBILE */
+
+@media (max-width: 512px) {
+  .navigation {
+    padding: 1.25rem var(--mobile-spacing);
+  }
 }
