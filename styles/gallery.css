@@ -93,6 +93,12 @@
   border-radius: 50%;
 }
 
+/* SCROLL REVEAL */
+
+.reveal-effect {
+  visibility: hidden;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 950px) {
